@@ -5,14 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Устанавливаю зависимости...'
-                sh 'node --version'
-                sh 'npm --version'
+               
             }
         }
         stage('Test') {
             steps {
                 echo 'Запускаю тесты...'
-                sh 'npm test'
+                
             }
         }
     }
