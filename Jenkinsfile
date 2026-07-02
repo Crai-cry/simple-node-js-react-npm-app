@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker { image 'node:18-alpine' }
+                docker { image 'node:20-alpine' }
             }
             steps {
                 echo 'Устанавливаю зависимости...'
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             agent {
-                docker { image 'node:18-alpine' }
+                docker { image 'node:20-alpine' }
             }
             steps {
                 echo 'Запускаю тесты...'
